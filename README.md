@@ -1,5 +1,5 @@
 # DS4CitizensLab
-*Benevenuti! :)*\\
+*Benevenuti! :)*\
 Questa Repository è dedicata agli studenti che partecipano a Data Science for Citizens. In particolare, collezioneremo tutto il materiale e le analisi effettuate dal gruppo che si occupa di studiare l'utilizzo dello smartphone ed i suoi effetti.\\
 Su questo file terremo traccia dei nostri obiettivi e di ciò che svilupperemo assieme. Prima di ogni incontro (virtuale o in presenza) cercherò di descrivere, volta per volta, il programma a cui ho pensato e che spero potrà essere portato a termine. Programmare è un'attività essenziale per "non perdere il filo del discorso" e avere sempre in mente un obiettivo ben delineato.\\
 Ovviamente, dato che il lavoro è collettivo, mi aspetto che la scaletta non venga rispettata del tutto: anzi, spero che la partecipazione e il coinvolgimento saranno tali da dare un carattere speciale al lavoro, in modo tale che tutti i punti di vista riescano ad amalgamarsi. 
