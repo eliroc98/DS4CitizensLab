@@ -1,0 +1,135 @@
+---
+title: "Quick R per l'incontro del 5 Febbraio"
+author: "Elisabetta Rocchetti"
+date: "2/4/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Prima di tutto: impostiamo la working directory. Questo passaggio è comodo perché, in seguito, dovremo inserire dei PATH (vedremo dopo cosa sono). Impostato questa working directory, ci risparmiamo di scrivere tutto il PATH assoluto (dalla root del file system) ogni volta.
+```{r}
+#ognuno ne avrà una diversa
+setwd("~/Desktop/Universita/tirocinio/cheat sheet/")
+```
+
+# Importare i dati
+Per importare i dati è necessario sapere dove è collocato il dataset che ci serve e l'estensione del file che vogliamo importare. Infatti, ci sono molti modi per salvare dei dati, dobbiamo dire a R che strumento utilizzare per estrarre i dati.\
+Ogni funzione mostrata in seguito può essere utilizzata per importare un tipo di file in particolare; per una spiegazione più accurata di come utilizzare questi metodi e quali argomenti poter impostare è necessario andare a cercare in documentazione.\
+Inoltre, ogni volta che vedete scritto "file.qualcosa", dovete inserire il vero PATH del file che volete importare. Il PATH è il percorso univoco che il File System in un Sistema Operativo utilizza per identificare e localizzare una risorsa (file).
+
+## .txt
+Importo i dati da un file *.txt*: la funzione read_delim() legge qualsiasi file .txt nel quale i dati sono separati da un certo carattere. In questo esempio, se il parser vede il carattere "|", sa che ciò che leggerà dopo appartiene a un'altra riga o cella
+```{r message=FALSE, warning=FALSE, eval = FALSE}
+read_delim("file.txt", delim="|")
+```
+## .csv
+Importo i dati da un file *.csv*. Importare i dati da questo tipo di file è molto più frequente. CSV vuol dire "Comma Separated Values", ma non fatevi ingannare: a volte i valori possono essere separati anche da un carattere diverso dalla virgola, come ad esempio il "semi-colon" (cioè il punto e virgola).Fate attenzione anche al modo in cui i numeri sono stati salvati: nei paesi anglosassoni, la virgola del decimale è in verità un punto (avrete infatti notato che alcune calcolatrici usano il punto anziché la virgola). Il formato stardard della funzione read_csv per indicare il decimale è il punto; se nel vostro dataset non è così, dovete specificarlo con un apposito parametro della funzione.
+```{r message=FALSE, warning=FALSE, eval = FALSE}
+read_csv("file.csv")
+#eseguire il codice qua sotto se la virgola è usata per separare la parte intera
+#da quella decimale
+read_csv("file.csv", decimal = ",")
+```
+## .xlsx
+Un altro modo per salvare i dati è utilizzando il formato excel .xlsx (probabilmente ciò che conoscete maggiormente).
+```{r message=FALSE, warning=FALSE, eval = FALSE}
+#Per usare questa funzione è necessario importare la libreria readxl.
+#Non ce l'hai? Esegui il comando "install.packages('readxl')".
+library(readxl)
+read_excel("file.xlsx")
+```
+Se vuoi saperne di più su come importare i file, ti raccomando di dare una sbirciata al cheat sheet dedicato sulla repository GitHub (oltre a cercare su Google).
+## Esempio
+Importiamo il nostro dataset .xlsx.
+```{r}
+library(readxl)
+data <- read_excel("Data Science for Citizens_cleaned.xlsx")
+```
+# Capire i dati
+Come fai a fare una torta senza farina? Non puoi. E come reagiresti se hai impiegato 4 ore del tuo tempo al supermercato (di cui 2 per fare la coda alla cassa), dimenticandoti di comprare proprio la farina? Male. Per evitare di triggerarsi per farine dimenticate sugli scaffali e per torte non fatte, sarebbe necessario controllare bene che nel carrello ci sia tutto ciò che ti serve.\
+Collezionare i dati adatti a fare un'analisi è simile a fare la spesa: ci vuole tempo e non puoi ottenere i risultati desiderati se non hai i dati giusti. In alcuni casi, non solo non otterresti il risultato giusto, ma non riusciresti neanche a eseguire la statistica che vuoi (ad esempio, non puoi ottenere la media tra variabili categoriche).\
+Per questo motivo, appena abbiamo a disposizione dei dati, bisogna analizzarli per bene e controllare che siano giusti giusti per la nostra analisi: ci servono degli strumenti che ci aiutano a fare ciò.\
+Per prima cosa, otteniamo una visione generale sui nostri dati.
+```{r message=FALSE, warning=FALSE, eval = FALSE}
+#al posto di "dataset" metti io nome della variabile che contiene il tuo dataset
+View(dataset)
+summary(dataset)
+```
+## Esempio
+```{r}
+View(data)
+summary(data)
+```
+
+Grazie a questi risultati possiamo farci un'idea di cosa abbiamo tra le mani e possiamo iniziare a porci delle domande: le variabili sono state importate come ci aspettavamo? Ci sono delle variabili di un tipo diverso da quello che ci aspettavamo? Dobbiamo trasformare le variabili categoriche in factor? Ci sono valori mancanti (NA)? Ci sono valori non conformi al dominio di appartenenza?\
+A volte, se non si è abbastanza attenti in questa fase, si ottengono dei risultati anomali e, nel megliore dei casi, ce ne accorgiamo e lo sistemiamo; in altri casi, l'anomalia potrebbe essere meno percettibile e potremmo non accorgerci dell'erroneità del risultato.\
+Per avere risposta a tutte queste domande, potremmo aver bisogno di descrizioni più dettagliate, ma per ora andiamo avanti con l'analisi. Avremo tempo per andare più in profondità con il nostro progetto.
+
+# Filtrare e correggere il dataset
+In alcuni casi, ci sono molte informazioni nei dataset non necessarie alla nostra analisi. Oppure ci sono delle variabili che bisogna trasformare (ad esempio, numeri salvati come stringhe).
+Ora vediamo come filtare righe, colonne e trasformare le variabili. Per fare ciò, useremo il package dplyr (se non l'hai installato, esegui il comando "install.packages('dplyr')").
+```{r message = FALSE, warning = FALSE}
+#install.packages('dplyr')
+library(dplyr)
+```
+## Selezionare solo alcune colonne
+```{r  message=FALSE, warning=FALSE, eval = FALSE}
+dataset %>% select(columns)
+```
+### Esempio
+```{r}
+data %>% select(Patente_nonne, Reddito)
+```
+## Selezionare solo alcune righe
+```{r message=FALSE, warning=FALSE, eval = FALSE}
+dataset %>% filter(condition)
+```
+### Esempio
+```{r}
+data %>% filter(Patente_nonne == "Una")
+```
+### Esempio
+```{r}
+#possiamo anche concatenare le operazioni
+data %>% 
+  select(Patente_nonne, Reddito) %>%
+  filter(Patente_nonne == "Una")
+```
+### Esempio
+```{r}
+#seleziono le righe che non hanno valori mancanti in nessuna colonna
+data %>% filter(if_all(everything(), ~ !is.na(.)))
+```
+### Esempio
+```{r}
+#seleziono le colonne che non hanno valori mancanti
+data %>% select_if(~ !any(is.na(.)))
+```
+## Trasformare i tipi delle variabili
+```{r message=FALSE, warning=FALSE, eval = FALSE}
+#trasformare una variabile esistente
+dataset %>% mutate(column = func(column))
+
+#aggiungere una variabile nuova
+dataset %>% mutate(column = func(some_other_column))
+```
+
+### Esempio
+```{r}
+#trasformiamo Reddito in una stringa
+data %>% mutate(Reddito = as.character(Reddito))
+```
+Nota che ora la variabile Reddito è un char (chr).
+
+```{r}
+#ri-trasformiamo Reddito in un numero
+data %>% mutate(Reddito = as.numeric(Reddito))
+```
+Nota che ora la variabile Reddito è un double (dbl).
+```{r}
+#aggiungiamo una variabile
+data %>% mutate(Reddito_al_quadrato = Reddito^2)
+```
+
