@@ -14,7 +14,7 @@ Ovviamente, dato che il lavoro è collettivo, mi aspetto che la scaletta non ven
 ### Parte 3: Hands on... Google!
 *Obiettivo principale*: capire come cercare le nostre risposte.
 - Date le domande raccolte nel punto (2), cerchiamo i dati che possiamo utilizzare per rispondere a queste domande. (ah no, siamo proprio nel laboratorio giusto).
-- La chiave di questo punto non sono le tabelle e i dati che scaricheremo (questi sono solo le conseguenze di ciò che faremo). Il vero scopo di questa fase è *capire come cercare*, che è sempre più difficile al giorno d'oggi, perciò ci vuole skill!
+- La chiave di questo punto non sono le tabelle e i dati che scaricheremo (questi sono solo le conseguenze di ciò che faremo). Il vero scopo di questa fase è *capire come cercare*, che è sempre più difficile al giorno d'oggi, perciò ci vuole skill!!
 ### Parte 4: Presentiamoci (parte 2; POV: i dati)
 *Obiettivo principale*: capire cosa abbiamo tra le mani.
 - Dati i dati "sporchi" (pessima battuta), pensiamo a come potremmo trasformarli per "farli parlare".
