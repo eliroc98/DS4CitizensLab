@@ -19,3 +19,21 @@ Ovviamente, dato che il lavoro è collettivo, mi aspetto che la scaletta non ven
 *Obiettivo principale*: capire cosa abbiamo tra le mani.
 - Dati i dati "sporchi" (pessima battuta), pensiamo a come potremmo trasformarli per "farli parlare".
 - Dati i dati "puliti" (scusatemi ma non posso evitare il cringe), pensiamo a come poterli descrivere e a capire cosa ci possono dire.
+
+## Appunti 5 Febbraio
+Dove e quali variabili:
+- arti, passatempi, informatica, comunicazione e giochi--> ORE SPESE/TEMPO LIBERO: 
+- link: http://dati.istat.it/Index.aspx?QueryId=24535#
+- anni: 2013, 2008, 2002
+- malati cronici: affetti da isturbi nervosi:
+- link: http://dati.istat.it/Index.aspx?QueryId=15445
+- anni: dall 2009 in poi
+- Indice di massa corporea e controllo del peso - sesso
+- link:http://dati.istat.it/Index.aspx?QueryId=16735
+- anni: dal 2003 in poi
+- Internet: accesso e tipo di utilizzo   : Attività svolte su internet (anche tipo di contenuto fruito)
+- link: http://dati.istat.it/Index.aspx?QueryId=22998
+- anni: dal 2005 in poi 
+- indice di fatturato dei servizi
+- link: http://dati.istat.it/Index.aspx?QueryId=26050#
+- anni: dal 2005 in poi
