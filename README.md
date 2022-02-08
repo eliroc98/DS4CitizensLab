@@ -4,6 +4,16 @@ Questa Repository è dedicata agli studenti che partecipano a Data Science for C
 Su questo file terremo traccia dei nostri obiettivi e di ciò che svilupperemo assieme. Prima di ogni incontro (virtuale o in presenza) cercherò di descrivere, volta per volta, il programma a cui ho pensato e che spero potrà essere portato a termine. Programmare è un'attività essenziale per "non perdere il filo del discorso" e avere sempre in mente un obiettivo ben delineato.\
 Ovviamente, dato che il lavoro è collettivo, mi aspetto che la scaletta non venga rispettata del tutto: anzi, spero che la partecipazione e il coinvolgimento saranno tali da dare un carattere speciale al lavoro, in modo tale che tutti i punti di vista riescano ad amalgamarsi. 
 
+## Compiti per l'incontro successivo
+Ciao! Potete scaricare il dataset cliccando sul bottone verde in alto a destra :).\
+Ecco ciò che vi consiglio di fare per impratichirvi sui dati:
+- visualizzare il dataset e produrre una breve descrizione di ciascuna variabile
+- descrivere il dataset attraverso indici statistici (moda, media, mediana, varianza, ...). Consiglio: utilizzate la funzione summary(dataset) di R
+Le variabili sono molte: non preoccupatevi se non riuscite a descriverle tutte, l'importante è rendersi conto in generale di cosa avete tra le mani. Molte variabili, come vedrete, hanno una "struttura" simile (ad esempio, hanno solo 0 e 1 come valori possibili): sfruttate queste similarità per descrivere più velocemente le variabili.
+Ho anche caricato lo script R utilizzato per formare il dataset, se avremo tempo ve lo spiegherò con più calma in futuro, quando ci rivedremo.\
+Scrivetemi se qualcosa non vi è chiaro! (Telegram: @eli_roc , email: elisabetta.rocchetti0@gmail.com)
+
+# Programma
 ## Sabato 5 febbraio
 ### Parte 1: Presentiamoci
 *Obiettivo principale*: fare squadra!
@@ -20,20 +30,10 @@ Ovviamente, dato che il lavoro è collettivo, mi aspetto che la scaletta non ven
 - Dati i dati "sporchi" (pessima battuta), pensiamo a come potremmo trasformarli per "farli parlare".
 - Dati i dati "puliti" (scusatemi ma non posso evitare il cringe), pensiamo a come poterli descrivere e a capire cosa ci possono dire.
 
-## Appunti 5 Febbraio
+### Appunti 5 Febbraio
 Dove e quali variabili:
-- arti, passatempi, informatica, comunicazione e giochi--> ORE SPESE/TEMPO LIBERO: 
-- link: http://dati.istat.it/Index.aspx?QueryId=24535#
-- anni: 2013, 2008, 2002
-- malati cronici: affetti da isturbi nervosi:
-- link: http://dati.istat.it/Index.aspx?QueryId=15445
-- anni: dall 2009 in poi
-- Indice di massa corporea e controllo del peso - sesso
-- link:http://dati.istat.it/Index.aspx?QueryId=16735
-- anni: dal 2003 in poi
-- Internet: accesso e tipo di utilizzo   : Attività svolte su internet (anche tipo di contenuto fruito)
-- link: http://dati.istat.it/Index.aspx?QueryId=22998
-- anni: dal 2005 in poi 
-- indice di fatturato dei servizi
-- link: http://dati.istat.it/Index.aspx?QueryId=26050#
-- anni: dal 2005 in poi
+- arti, passatempi, informatica, comunicazione e giochi --> ORE SPESE/TEMPO LIBERO: (link: http://dati.istat.it/Index.aspx?QueryId=24535#9 (anni: 2013, 2008, 2002)
+- malati cronici: affetti da isturbi nervosi: (link: http://dati.istat.it/Index.aspx?QueryId=15445) (anni: dall 2009 in poi)
+- Indice di massa corporea e controllo del peso - sesso (link:http://dati.istat.it/Index.aspx?QueryId=16735) (anni: dal 2003 in poi)
+- Internet: accesso e tipo di utilizzo   : Attività svolte su internet (anche tipo di contenuto fruito) (link: http://dati.istat.it/Index.aspx?QueryId=22998) (anni: dal 2005 in poi)
+- indice di fatturato dei servizi (link: http://dati.istat.it/Index.aspx?QueryId=26050#) (anni: dal 2005 in poi9
