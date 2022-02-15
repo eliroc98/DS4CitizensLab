@@ -4,13 +4,11 @@ Questa Repository è dedicata agli studenti che partecipano a Data Science for C
 Su questo file terremo traccia dei nostri obiettivi e di ciò che svilupperemo assieme. Prima di ogni incontro (virtuale o in presenza) cercherò di descrivere, volta per volta, il programma a cui ho pensato e che spero potrà essere portato a termine. Programmare è un'attività essenziale per "non perdere il filo del discorso" e avere sempre in mente un obiettivo ben delineato.\
 Ovviamente, dato che il lavoro è collettivo, mi aspetto che la scaletta non venga rispettata del tutto: anzi, spero che la partecipazione e il coinvolgimento saranno tali da dare un carattere speciale al lavoro, in modo tale che tutti i punti di vista riescano ad amalgamarsi. 
 
-## Compiti per l'incontro successivo
-Ciao! Potete scaricare il dataset cliccando sul bottone verde in alto a destra :).\
-Ecco ciò che vi consiglio di fare per impratichirvi sui dati:
-- visualizzare il dataset e produrre una breve descrizione di ciascuna variabile
-- descrivere il dataset attraverso indici statistici (moda, media, mediana, varianza, ...). Consiglio: utilizzate la funzione summary(dataset) di R
-Le variabili sono molte: non preoccupatevi se non riuscite a descriverle tutte, l'importante è rendersi conto in generale di cosa avete tra le mani. Molte variabili, come vedrete, hanno una "struttura" simile (ad esempio, hanno solo 0 e 1 come valori possibili): sfruttate queste similarità per descrivere più velocemente le variabili.
-Ho anche caricato lo script R utilizzato per formare il dataset, se avremo tempo ve lo spiegherò con più calma in futuro, quando ci rivedremo.\
+## Compiti per l'incontro successivo (2 Marzo)
+Ciao! Potete scaricare il dataset e il codice usato a lezione cliccando sul bottone verde in alto a destra :).\
+Ecco ciò che vi consiglio di fare:
+- cercate di usare R per disegnare altri grafici, del tipo che volete voi!
+- se avete delle idee su che grafici fare ma non sapete come farli, scrivetemi! Cercherò di farli e ve li porterò la prossima volta, spiegandovi il codice che ho scritto per ottenerli,
 Scrivetemi se qualcosa non vi è chiaro! (Telegram: @eli_roc , email: elisabetta.rocchetti0@gmail.com)
 
 # Programma
