@@ -14,6 +14,16 @@ Ho anche caricato lo script R utilizzato per formare il dataset, se avremo tempo
 Scrivetemi se qualcosa non vi è chiaro! (Telegram: @eli_roc , email: elisabetta.rocchetti0@gmail.com)
 
 # Programma
+## Mercoledì 16 febbraio
+### Parte 1: Ecco il nostro dataset!
+*Obiettivo principale*: presentazione del nuovo dataset.
+- La volta scorsa abbiamo visto che il processo di scegliere i dati da internet non è per nulla facile, e sono necessarie varie prove prima di avere ciò che serve per rispondere alle nostre domande!
+- Presentazione del nuovo dataset: da dove viene e che caratteristiche ha
+### Parte 2: Esplorando il dataset...
+*Obiettivo principale*: capire il dataset.
+- R alla mano! Inizieremo a giocare con il dataset, esplorando le caratteristiche principali con R.
+- E ora un po' di grafici! (Sempre con R)
+
 ## Sabato 5 febbraio
 ### Parte 1: Presentiamoci ✅
 *Obiettivo principale*: fare squadra!
