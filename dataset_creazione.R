@@ -1,5 +1,7 @@
+#https://www.sciencedirect.com/science/article/pii/S2352340921008684
 library(dplyr)
-dataset <- read.csv("/Users/lizzy/Desktop/dataset_2.csv", sep = ";")
+library(readxl)
+dataset <- read.csv("/Users/lizzy/Desktop/Universita/tirocinio/github/DS4CitizensLab/dataset_originale.csv", sep = ";")
 View(dataset)
 
 #X2..Which.social.media.account.do.you.use.usually.
@@ -396,4 +398,4 @@ dataset$altezza <- as.numeric(str_replace_all(dataset$altezza, ",", "."))
 dataset$peso <- as.numeric(str_replace_all(dataset$peso, ",", "."))
 dataset$eta <- as.numeric(str_replace_all(dataset$eta, ",", "."))
 
-write.csv(dataset, "/Users/lizzy/Desktop/dataset.csv")
+#write.csv(dataset, "/Users/lizzy/Desktop/dataset.csv")
