@@ -282,7 +282,22 @@ lista <- c("perche.uso.sn",
            "abitudine.al.fumo",
            "professione",
            "tipo.social.network")
-dataset <- dummy_cols(dataset, select_columns = lista, remove_selected_columns = TRUE)
+dataset <- dummy_cols(dataset, select_columns = lista, remove_selected_columns = FALSE)
+
+dataset$`tipo.contenuto.visto.sn_Beautiful girls Lady`[which(dataset$tipo.contenuto.visto.sn_All.of.the.above == 1 | dataset$tipo.contenuto.visto.sn_All.of.them == 1)] <- 1
+dataset$tipo.contenuto.visto.sn_Business[which(dataset$tipo.contenuto.visto.sn_All.of.the.above == 1 | dataset$tipo.contenuto.visto.sn_All.of.them == 1)] <- 1
+dataset$tipo.contenuto.visto.sn_Ducks[which(dataset$tipo.contenuto.visto.sn_All.of.the.above == 1 | dataset$tipo.contenuto.visto.sn_All.of.them == 1)] <- 1
+dataset$`tipo.contenuto.visto.sn_Entertainment `[which(dataset$tipo.contenuto.visto.sn_All.of.the.above == 1 | dataset$tipo.contenuto.visto.sn_All.of.them == 11)] <- 1
+dataset$`tipo.contenuto.visto.sn_For higher studies`[which(dataset$tipo.contenuto.visto.sn_All.of.the.above == 1 | dataset$tipo.contenuto.visto.sn_All.of.them == 1)] <- 1
+dataset$`tipo.contenuto.visto.sn_For random contents not specified `[which(dataset$tipo.contenuto.visto.sn_All.of.the.above == 1 | dataset$tipo.contenuto.visto.sn_All.of.them == 1 | dataset$`tipo.contenuto.visto.sn_Nothing specific ` == 1)] <- 1
+dataset$`tipo.contenuto.visto.sn_Get pleasure from funny posts/ memes`[which(dataset$tipo.contenuto.visto.sn_All.of.the.above == 1 | dataset$tipo.contenuto.visto.sn_All.of.them == 1 | dataset$`tipo.contenuto.visto.sn_To Stay Connected, get updates from people and get pleasure from memes` == 1)] <- 1
+dataset$`tipo.contenuto.visto.sn_Islamic content`[which(dataset$tipo.contenuto.visto.sn_All.of.the.above == 1 | dataset$tipo.contenuto.visto.sn_All.of.them == 1)] <- 1
+dataset$`tipo.contenuto.visto.sn_Job circular`[which(dataset$tipo.contenuto.visto.sn_All.of.the.above == 1 | dataset$tipo.contenuto.visto.sn_All.of.them == 1 | dataset$`tipo.contenuto.visto.sn_To get updates of job circular, to learn from job related post/experience` == 1)] <- 1
+dataset$`tipo.contenuto.visto.sn_Motivational/ informative contents`[which(dataset$tipo.contenuto.visto.sn_All.of.the.above == 1 | dataset$tipo.contenuto.visto.sn_All.of.them == 1)] <- 1
+dataset$`tipo.contenuto.visto.sn_To buy products from various online pages/groups `[which(dataset$tipo.contenuto.visto.sn_All.of.the.above == 1 | dataset$tipo.contenuto.visto.sn_All.of.them == 1)] <- 1
+dataset$`tipo.contenuto.visto.sn_To stay connected with people`[which(dataset$tipo.contenuto.visto.sn_All.of.the.above == 1 | dataset$tipo.contenuto.visto.sn_All.of.them == 1 | dataset$`tipo.contenuto.visto.sn_Both update of current affairs and stay connected with people` == 1 | dataset$`tipo.contenuto.visto.sn_To Stay Connected, get updates from people and get pleasure from memes` == 1)] <- 1
+dataset$`tipo.contenuto.visto.sn_Updates of current affairs/news`[which(dataset$tipo.contenuto.visto.sn_All.of.the.above == 1 | dataset$tipo.contenuto.visto.sn_All.of.them == 1 | dataset$`tipo.contenuto.visto.sn_Both update of current affairs and stay connected with people` == 1)] <- 1
+dataset$`tipo.contenuto.visto.sn_Updates of people`[which(dataset$tipo.contenuto.visto.sn_All.of.the.above == 1 | dataset$tipo.contenuto.visto.sn_All.of.them == 1 | dataset$`tipo.contenuto.visto.sn_To Stay Connected, get updates from people and get pleasure from memes` == 1)] <- 1
 
 dataset$professione_housewife <- dataset$professione_housewife + dataset$professione_hhousewife
 dataset$professione_doctor <- dataset$professione_doctor + dataset$professione_interndoctor
@@ -306,7 +321,13 @@ dataset <- dataset %>% dplyr::select(-c(professione_hhousewife,
                                         `abitudine.al.fumo_Non-smoker`,
                                         tipo.social.network_Messaggistica,
                                         pressione.da.compagni_No,
-                                        credo.a.quello.che.vedo_No))
+                                        credo.a.quello.che.vedo_No,
+                                        `tipo.contenuto.visto.sn_Both update of current affairs and stay connected with people`,
+                                        `tipo.contenuto.visto.sn_Nothing specific `,
+                                        `tipo.contenuto.visto.sn_To get updates of job circular, to learn from job related post/experience`,
+                                        `tipo.contenuto.visto.sn_To Stay Connected, get updates from people and get pleasure from memes`,
+                                        `tipo.contenuto.visto.sn_All of the above`,
+                                        `tipo.contenuto.visto.sn_All of them`))
 
 dataset["malessere"] <- dataset$mancanza.compagnia + 
   dataset$mancanza.confidente + 
@@ -398,4 +419,4 @@ dataset$altezza <- as.numeric(str_replace_all(dataset$altezza, ",", "."))
 dataset$peso <- as.numeric(str_replace_all(dataset$peso, ",", "."))
 dataset$eta <- as.numeric(str_replace_all(dataset$eta, ",", "."))
 
-#write.csv(dataset, "/Users/lizzy/Desktop/dataset.csv")
+write.csv(dataset, "/Users/lizzy/Desktop/Universita/tirocinio/github/DS4CitizensLab/dataset.csv")
