@@ -4,11 +4,12 @@ Questa Repository è dedicata agli studenti che partecipano a Data Science for C
 Su questo file terremo traccia dei nostri obiettivi e di ciò che svilupperemo assieme. Prima di ogni incontro (virtuale o in presenza) cercherò di descrivere, volta per volta, il programma a cui ho pensato e che spero potrà essere portato a termine. Programmare è un'attività essenziale per "non perdere il filo del discorso" e avere sempre in mente un obiettivo ben delineato.\
 Ovviamente, dato che il lavoro è collettivo, mi aspetto che la scaletta non venga rispettata del tutto: anzi, spero che la partecipazione e il coinvolgimento saranno tali da dare un carattere speciale al lavoro, in modo tale che tutti i punti di vista riescano ad amalgamarsi. 
 
-## Compiti per l'incontro successivo (2 Marzo)
+## Compiti (9 marzo)
 Ciao! Potete scaricare il dataset e il codice usato a lezione cliccando sul bottone verde in alto a destra :).\
-Ecco ciò che vi consiglio di fare:
-- cercate di usare R per disegnare altri grafici, del tipo che volete voi!
-- se avete delle idee su che grafici fare ma non sapete come farli, scrivetemi! Cercherò di farli e ve li porterò la prossima volta, spiegandovi il codice che ho scritto per ottenerli,
+Ciò che vi consiglio di fare durante l'incontro il classe del 9 marzo è: (semplicemente) ragionare su ciò che abbiamo fatto la volta precedente.\
+In particolare, vorrei che ciascuno di voi produca un foglio (word/excel) nel quale, per ogni variabile vista nella regressione (per ottenerla eseguire tutto il codice presentato la scorsa volta), appuntate la vostra personale interpretazione.\
+Mi aspetto un breve testo per ciascuna variabile (non solo 2 frasette, ad esempio): questo lavoro deve essere svolto giusto in un'ora.\
+Se preferite posso rimanere in una call su Teams, così se volete chiedermi qualcosa posso rispondervi subito!\
 Scrivetemi se qualcosa non vi è chiaro! (Telegram: @eli_roc , email: elisabetta.rocchetti0@gmail.com)
 
 # Programma
